@@ -1,0 +1,4 @@
+.bg-free-shipping {
+  /* background-image: linear-gradient(45deg, #567189 0 40%, #394867 40% 100%); */
+  background-image: linear-gradient(to right, #394867 5%, #94a3b8, #394867 95%);
+}

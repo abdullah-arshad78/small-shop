@@ -1,13 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;500;700;900&family=Titan+One&display=swap");
+
+:root {
+  --secondary-font: "Permanent Marker", cursive;
+  --primary-font: "Titan One", cursive;
+  --text-font: "Roboto", sans-serif;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--text-font);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.main-heading {
+  font-family: var(--primary-font);
+}
+.secondary-heading {
+  font-family: var(--secondary-font);
+}
+
+/* Main Button's Arrow Transition */
+.main-btn .main-btn-arrow {
+  transition: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 200ms;
+}
+.main-btn:hover .main-btn-arrow {
+  transform: translateX(0.6rem);
+}
+.no-decoration {
+  font-style: inherit;
+}
+.product-page-bg {
+  background-color: #ffffff;
+  opacity: 1;
+  background-image: radial-gradient(#000000 0.55px, #ffffff 0.55px);
+  background-size: 11px 11px;
+}
+svg.star-svg {
+  display: inline;
+  filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1))
+    drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+}
+.product-img-shadow {
+  box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.63);
+  -webkit-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.63);
+  -moz-box-shadow: 0px 0px 14px -1px rgba(0, 0, 0, 0.63);
+}
+
+.categories-list-item:last-child {
+  border: none;
+}
+.role-img-shadow {
+  filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.31));
+}
+textarea {
+  resize: none;
+}
+
+/* Animation for categories container for mob navigation */
+.mobile-categories-animation {
+  animation: slideFromTop 0.5s ease-in;
+}
+
+@keyframes slideFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
